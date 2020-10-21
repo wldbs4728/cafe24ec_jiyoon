@@ -1,0 +1,96 @@
+<div id="header">
+
+	<div class="inner">
+
+
+
+
+		 <div class="topArea">
+			<h1 module="Layout_LogoTop">
+
+			<!--@css(/css/module/layout/logotop.css)-->
+
+			<a href="/index.html"><img src="/img/logo3.png"></a>
+
+			</h1>
+			<ul id='navi'>
+
+				<li>
+					<a class='d1' href="/category/전체카테고리/48/">전체카테고리</a>
+					<div id="category" module="Layout_category">
+					<!--@css(/css/module/layout/category.css)-->
+					<!--@js(/js/module/layout/category.js)-->
+						<div class="position">
+							<ul>
+								<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+								<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+								<li><a href="{$link_product_list}">{$name_or_img_tag}</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href='/product/list.html?cate_no=49'>신상품</a></li>
+				<li><a href='product/list.html?cate_no=50'>베스트</a></li>
+				<li><a href='/front/php/b/board_list.php?board_no=5'>매거진</a></li>
+				<li><a href='/front/php/b/board_list.php?board_no=8'>이벤트</a></li>
+			</ul>
+			<div class='rightCon'>
+
+
+				<div class='mypageIcon'>
+					<a href="#none" id="jy_click_login_Btn"><img src="https://static.lotteon.com/p/common/foCommon/assets/img/icon_my_black.svg" ></a>
+					<div module="Layout_statelogoff" class='login_subMenu'>
+							<!--@css(/css/module/layout/statelogoff.css)-->
+							<a href="/member/login.html" class="log">로그인</a>
+							<a href="/member/join.html">회원가입</a>
+							<a href="/order/basket.html"><img src="https://static.lotteon.com/p/common/foCommon/assets/img/icon_cart_black.svg"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+							<a href="/myshop/order/list.html">주문조회</a>
+							<a href="/myshop/index.html">마이쇼핑</a>
+							<a class="{$board_display|display}" href="/board/index.html">게시판</a>
+					</div>
+
+					<div module="Layout_stateLogon" class='login_subMenu'>
+							<!--@css(/css/module/layout/statelogon.css)-->
+							<a href="/member/modify.html">회원정보수정</a>
+							<a href="{$action_logout}" class="log">로그아웃</a>
+
+							<a href="/myshop/order/list.html">주문조회</a>
+							<a href="/myshop/index.html">마이쇼핑</a>
+							<a class="{$board_display|display}" href="/board/index.html">게시판</a>
+					</div>
+				</div>
+				<div class='cartIcon' module="Layout_statelogoff">
+					 <a href="/order/basket.html"><img src="https://static.lotteon.com/p/common/foCommon/assets/img/icon_cart_black.svg"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+				</div>
+				<div class='cartIcon' module="Layout_stateLogon">
+					 <a href="/order/basket.html"><img src="https://static.lotteon.com/p/common/foCommon/assets/img/icon_cart_black.svg"><span class="count {$basket_count_display|display} {$basket_count_display_class}"><span class="{$basket_count_class}">{$basket_count}</span></span></a>
+				</div>
+
+				<div module="Layout_SearchHeader">
+					<a href="#none" id="jy_clickBtn"><img src="/web/upload/src/click.png" ></a>
+					<div id="jy_searchBoxDiv">
+					<!--@css(/css/module/layout/searchHeader.css)-->
+
+					<!--
+
+					$product_page=/product/detail.html
+
+					$category_page=/product/list.html
+
+					-->
+
+					<fieldset>
+
+					<legend>검색</legend>
+
+					{$form.keyword}<input type="image" src="/web/upload/src/click2.png" id="jy_searchBox_searchIcon" alt="검색" onclick="{$action_search_submit}" /><ul class="autoDrop" id="{$search_auto_id}"></ul></fieldset>
+					</div>
+
+				</div>
+
+			</div>
+		 </div>
+
+	</div>
+
+</div>
